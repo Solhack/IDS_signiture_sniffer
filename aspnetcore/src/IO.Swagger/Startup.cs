@@ -74,7 +74,7 @@ namespace IO.Swagger
                     {
                         Version = "1.0.0",
                         Title = "Sample Application Flow OAuth2 Project",
-                        Description = "Sample Application Flow OAuth2 Project (ASP.NET Core 3.0)",
+                        Description = "Sample Application Flow OAuth2 Project (ASP.NET Core 3.1)",
                         Contact = new OpenApiContact()
                         {
                            Name = "Swagger Codegen Contributors",
@@ -85,6 +85,8 @@ namespace IO.Swagger
                     });
                     c.CustomSchemaIds(type => type.FullName);
                     c.IncludeXmlComments($"{AppContext.BaseDirectory}{Path.DirectorySeparatorChar}{_hostingEnv.ApplicationName}.xml");
+                    // Sets the basePath property in the Swagger document generated
+                    c.DocumentFilter<BasePathFilter>("/ip/");
 
                     // Include DataAnnotation attributes on Controller Action parameters as Swagger validation rules (e.g required, pattern, ..)
                     // Use [ValidateModelState] on Actions to actually validate it in C# as well!
