@@ -28,29 +28,12 @@ namespace IO.Swagger.Controllers
     public class DefaultApiController : ControllerBase
     { 
         /// <summary>
-        /// Server example operation
-        /// </summary>
-        /// <remarks>This is an example operation to show how security is applied to the call.</remarks>
-        /// <response code="200">OK</response>
-        [HttpGet]
-        [Route("/ip//example")]
-        [ValidateModelState]
-        [SwaggerOperation("ExampleGet")]
-        public virtual IActionResult ExampleGet()
-        { 
-            //TODO: Uncomment the next line to return response 200 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
-            // return StatusCode(200);
-
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
         /// Server heartbeat operation
         /// </summary>
         /// <remarks>This operation shows how to override the global security defined above, as we want to open it up for all users.</remarks>
         /// <response code="200">OK</response>
         [HttpGet]
-        [Route("/ip//ping")]
+        [Route("//ping")]
         [ValidateModelState]
         [SwaggerOperation("PingGet")]
         public virtual IActionResult PingGet()
