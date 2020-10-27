@@ -35,6 +35,15 @@
             "format" : "int64"
           }
         }
+      },
+      "Schema1" : {
+        "type" : "object",
+        "properties" : {
+          "id" : {
+            "type" : "integer",
+            "format" : "int64"
+          }
+        }
       }
     },
     "securitySchemes" : {
