@@ -1,6 +1,5 @@
 # IO.Swagger - ASP.NET Core 2.0 Server
 
-This is an example of using OAuth2 Application Flow in a specification to describe security to your API.
 
 ## Run
 
